@@ -1,0 +1,228 @@
+body {
+  /* all four sides */
+  margin: 0;
+  text-align: center;
+  /*
+  you can also get fonts from fonts.google.com
+  font-family: name, font family type ... check out css web safe fonts
+  fallbacks
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif */
+  font-family: 'Merriweather', serif;
+  color: #40514E;
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  color: #66BFBF;
+  line-height: 2; /* 1 is default, unitless value just multiples it by given
+                    value */
+  font-family: 'Sacramento', cursive;
+  font-size: 562.5%; /* using pixels isnt dynamic, use percentages instead
+                      100% is equivalent to 16 px,
+                      so to get 90 px, it'll be 562.5%
+
+  em is the phonetic pronunciation of the letter M
+  1em is 1 * the width of the letter capital M
+                        1em = 16px = 100%
+                  dynamic, static, dynamic
+using rem ignores all the parent sizes
+
+  width: 30%;
+  margin: 0 auto 0 auto;  for elements that dont have a set width
+*/
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+a {
+  color: #11999E;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none; /* removes underline for links */
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+p {
+  line-height: 2;
+}
+
+hr {
+  width: 5%;
+  border: 6px dotted lightgrey;
+  border-bottom: none;
+  margin: 100px auto;
+}
+/* css display property
+  1. block: take up the whole width of the screen
+     examples are paragraphs, headers, divs, lists and list items, and forms
+     width can be changed but doesnt let other elements sit on the same line
+
+  2. inline: takes up as much space as it needs to
+    examples are span, images, and anchor tags
+    can't change width of inline elements
+
+  3. inline-block: allows u to change width and allows elements to sit on the
+    same line
+
+  4. none: basically gets rid of elements, like deleting it off the file
+      * different from trying to hide a quiz on ur page using visibility
+      * visibilty: hidden --> keeps original position of element but can't be
+        seen
+
+
+position property
+  1. static
+    all html elements are static by default
+  2. relative
+    relative to how it wouldve been positionned had it been static
+    doesnt affect anything else on the screen
+    ex.
+
+  img {
+  position: relative
+  left: 30px;  gives 30 pixels of space between original pic so moves
+               it to the right
+               types of coordinates: top, left, right, bottom
+}
+  3. absolute
+    positions the element relative to its parent
+    adding a margin to its parent element
+    affects flow of ur html!!
+
+  4. fixed
+    if u scroll through webpage, element wil stay fixed
+
+
+
+
+
+fonts:
+  1. sans-serif
+  2. serif (has little feet)
+  3. monospace (for coding!)
+other: cursive & fantasy have low readability + don't look that great
+*/
+/******************************** CLASS **************************************/
+.top-container {
+  background-color: #EAF6F6;
+  position: relative;
+  padding-top: 100px;
+}
+
+.middle-container {
+  margin: 100px 0;
+}
+.bottom-container {
+  background-color: #AEE1E1;
+  width: auto;
+  padding: 50px 0 20px;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+
+.me {
+  width: 25%;
+}
+
+.intro-text {
+  width: 50%;
+  margin: auto;
+}
+
+.design-img {
+  margin-right: 30px;
+  float: left;
+  width: 25%;
+}
+
+.eggs-img {
+  margin-left: 30px;
+  float: right;
+  width: 25%;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto; /* allows us to center the skill rows */
+  text-align: left;
+}
+
+.contact-text {
+  width: 50%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 0;
+  color: #EAF6F6;
+  font-size: 0.75rem;
+}
+
+/*
+only use float when necessary as its overused
+and don't use it for positioning
+
+.design-skill-description {
+  clear: left;
+}
+
+.eggs-skill-description {
+  clear: right;
+}
+*/
+
+.btn {
+  background:  #11cdd4;
+  background-image: -webkit-linear-gradient(top,  #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top,  #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top,  #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top,  #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom,  #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
